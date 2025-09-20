@@ -95,9 +95,12 @@
     .card-content a:hover {
       background: #2ea043;
     }
-    .contact {
+    .contact, .about {
       text-align: center;
       font-size: 1.1em;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6em;
     }
     .contact a {
       color: #58a6ff;
@@ -109,6 +112,7 @@
   <!-- Navbar -->
   <nav>
     <a href="#home">Home</a>
+    <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -118,6 +122,24 @@
     <h1>Sam Breen | Portfolio</h1>
     <p>Data Analysis • Python • SQL • Tableau • Creative Projects</p>
   </header>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2 style="text-align:center; color:#58a6ff;">About Me</h2>
+    <div class="about">
+      <p>
+        Hi, I’m <b>Sam Breen</b> — a data analyst with a passion for combining 
+        technical skills and creativity. My portfolio includes projects in SQL, Python, Excel, 
+        and Tableau, along with unique creative data projects inspired by games and media.  
+      </p>
+      <p>
+        I enjoy solving problems, building clean data solutions, and presenting insights 
+        in clear, interactive ways. This site showcases my work, from 
+        <i>Pokémon data analysis</i> to <i>Balatro simulations</i>, 
+        and more advanced machine learning experiments with real-world datasets like NASA.  
+      </p>
+    </div>
+  </section>
 
   <!-- Projects Section -->
   <section id="projects">
@@ -145,7 +167,7 @@
 
       <!-- Balatro -->
       <div class="card">
-        <img src="760de304-bee3-4313-beda-d4c1bb4f6d30.png" alt="Balatro Project">
+        <img src="d8c5d5861249cd80a300efb723450f56d0347e4.png" alt="Balatro Project">
         <div class="card-content">
           <h3>Balatro Run Python</h3>
           <p>A Python simulation and analysis of Balatro deck strategies and mechanics.</p>
