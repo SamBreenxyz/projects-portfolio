@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sam Breen | Project Portfolio</title>
   <style>
+    /* Global Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: #0d1117;
       color: #e6edf3;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
     }
+
+    h1, h2, h3 {
+      color: #58a6ff;
+    }
+
     /* Navbar */
     nav {
       background: #161b22;
@@ -34,36 +40,56 @@
     nav a:hover {
       color: #58a6ff;
     }
+
+    /* Header */
     header {
       text-align: center;
-      padding: 60px 20px;
-      background: #161b22;
+      padding: 70px 20px;
+      background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
     }
     header h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin: 0;
     }
     header p {
       font-size: 1.2em;
       color: #8b949e;
     }
+
+    /* Sections */
     section {
       padding: 60px 20px;
     }
+    .about, .contact {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.6em;
+      font-size: 1.1em;
+    }
+    .contact a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    /* Project Cards */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      max-width: 1200px;
+      margin: auto;
     }
     .card {
       background: #161b22;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
     }
     .card img {
       width: 100%;
@@ -74,9 +100,7 @@
       padding: 20px;
     }
     .card-content h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: #58a6ff;
+      margin: 0 0 10px 0;
     }
     .card-content p {
       color: #8b949e;
@@ -95,16 +119,14 @@
     .card-content a:hover {
       background: #2ea043;
     }
-    .contact, .about {
+
+    /* Footer */
+    footer {
       text-align: center;
-      font-size: 1.1em;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6em;
-    }
-    .contact a {
-      color: #58a6ff;
-      text-decoration: none;
+      padding: 20px;
+      background: #161b22;
+      color: #8b949e;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -125,25 +147,24 @@
 
   <!-- About Me Section -->
   <section id="about">
-    <h2 style="text-align:center; color:#58a6ff;">About Me</h2>
+    <h2>About Me</h2>
     <div class="about">
       <p>
         Hi, I’m <b>Sam Breen</b> — a data analyst with a passion for combining 
-        technical skills and creativity. My portfolio includes projects in SQL, Python, Excel, 
-        and Tableau, along with unique creative data projects inspired by games and media.  
+        technical skills and creativity. My portfolio showcases projects in 
+        <b>SQL</b>, <b>Python</b>, <b>Excel</b>, and <b>Tableau</b>, as well as 
+        unique creative data projects inspired by games and media.
       </p>
       <p>
         I enjoy solving problems, building clean data solutions, and presenting insights 
-        in clear, interactive ways. This site showcases my work, from 
-        <i>Pokémon data analysis</i> to <i>Balatro simulations</i>, 
-        and more advanced machine learning experiments with real-world datasets like NASA.  
+        in interactive, engaging ways. Scroll down to see my featured projects!
       </p>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
-    <h2 style="text-align:center; color:#58a6ff;">Projects</h2>
+    <h2 style="text-align:center;">Projects</h2>
     <div class="container">
       <!-- Pokémon Project -->
       <div class="card">
@@ -167,7 +188,7 @@
 
       <!-- Balatro -->
       <div class="card">
-        <img src="d8c5d5861249cd80a300efb723450f56d0347e4.png" alt="Balatro Project">
+        <img src="balatro.png" alt="Balatro Project">
         <div class="card-content">
           <h3>Balatro Run Python</h3>
           <p>A Python simulation and analysis of Balatro deck strategies and mechanics.</p>
@@ -199,12 +220,17 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2 style="text-align:center; color:#58a6ff;">Contact</h2>
+    <h2>Contact</h2>
     <div class="contact">
       <p>📞 Phone: +353-XXX-XXXX</p>
       <p>📧 Email: your.email@example.com</p>
       <p>🌐 GitHub: <a href="https://github.com/SamBreenxyz" target="_blank">SamBreenxyz</a></p>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sam Breen. All rights reserved.</p>
+  </footer>
 </body>
 </html>
