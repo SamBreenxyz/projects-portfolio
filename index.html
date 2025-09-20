@@ -36,7 +36,7 @@
 
     header {
       height: 100vh;
-      background: linear-gradient(135deg, #111, #333, #111);
+      background: linear-gradient(135deg, #111, #222, #111);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -72,11 +72,12 @@
       gap: 2rem;
     }
     .project-card {
-      background: #1c1c1c;
+      background: #1a1a1a;
       border-radius: 14px;
       overflow: hidden;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px rgba(0,173,238,0.2);
       padding-bottom: 1rem;
     }
     .project-card:hover {
@@ -87,7 +88,8 @@
       width: 100%;
       height: 160px;
       object-fit: contain;
-      background: #fff;
+      background: #111;
+      padding: 10px;
     }
     .project-card h3 {
       margin: 1rem 0 0.5rem;
@@ -139,41 +141,36 @@
     <h2>Featured Projects</h2>
     <div class="project-grid">
 
-      <!-- SQL Bank Database -->
       <div class="project-card">
-        <img src="https://dbeaver.io/wp-content/uploads/2015/09/beaver-head.png" alt="DBeaver logo">
+        <img src="images/sql.png" alt="SQL Bank Database logo">
         <h3>SQL Bank Database</h3>
-        <p>Relational database with accounts, transactions, loans & analysis queries.</p>
+        <p>Relational database with accounts, transactions, loans & advanced SQL queries.</p>
         <a href="https://github.com/SamBreenxyz/bankdatebase">View on GitHub</a>
       </div>
 
-      <!-- Vocaloid Project -->
       <div class="project-card">
-        <img src="https://seeklogo.com/images/H/hatsune-miku-logo-5020564F8D-seeklogo.com.png" alt="Hatsune Miku logo">
+        <img src="images/vocaloid.png" alt="Vocaloid logo">
         <h3>Vocaloid Project</h3>
         <p>Python & data science workflow applied to Vocaloid music data.</p>
         <a href="https://github.com/SamBreenxyz/vocaloid-python">View on GitHub</a>
       </div>
 
-      <!-- Balatro Project -->
       <div class="project-card">
-        <img src="https://i.imgur.com/nT0XoZr.png" alt="Balatro logo">
+        <img src="images/balatro.png" alt="Balatro logo">
         <h3>Balatro Project</h3>
         <p>Python simulations exploring Balatro deck strategies and outcomes.</p>
         <a href="https://github.com/SamBreenxyz/balatro-run-python">View on GitHub</a>
       </div>
 
-      <!-- Capstone NASA -->
       <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA logo">
+        <img src="images/nasa.png" alt="NASA logo">
         <h3>Capstone Project (NASA)</h3>
         <p>Full data science workflow on real NASA datasets.</p>
         <a href="https://github.com/SamBreenxyz/capstone-coursea">View on GitHub</a>
       </div>
 
-      <!-- Pokémon Project -->
       <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg" alt="Pokémon logo">
+        <img src="images/pokemon.png" alt="Pokémon logo">
         <h3>Pokémon Project</h3>
         <p>Excel & Tableau analysis of Pokémon dataset with visual dashboards.</p>
         <a href="https://github.com/SamBreenxyz/pokemon-data-analysis-">View on GitHub</a>
