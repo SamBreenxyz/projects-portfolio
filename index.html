@@ -1,86 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sam Breen's Project Portfolio</title>
+  <title>Marcy's Project Portfolio</title>
   <style>
     body {
       background-color: #121212;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0 1rem;
-    }
-    h1, h2, h3 {
       color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 40px;
     }
-    header {
-      padding: 2rem 0;
-      text-align: center;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
     }
-    section {
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .card {
       background-color: #1e1e1e;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    img {
-      max-width: 150px;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    }
+    .card img {
+      width: 100px;
       height: auto;
-      display: block;
-      margin: 0.5rem 0;
+      margin-bottom: 15px;
+      border-radius: 12px;
     }
-    a {
-      color: #76c0ff;
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00bfff;
+      color: #fff;
+      border-radius: 8px;
       text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+    .card a:hover {
+      background-color: #009acd;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Sam Breen's Project Portfolio</h1>
-    <p>A showcase of data science, analytics and creative coding projects.</p>
-  </header>
+  <h1>✨ Marcy's Featured Projects ✨</h1>
+  <div class="projects">
 
-  <section>
-    <h2>SQL Bank Database</h2>
-    <p>Relational database with accounts, transactions, loans & analysis queries.</p>
-    <a href="https://github.com/SamBreenxyz/bankdatebase" target="_blank">View on GitHub</a>
-    <img src="beaver-head.png" alt="SQL database beaver logo">
-  </section>
+    <div class="card">
+      <img src="beaver-head.png" alt="SQL Bank Database logo">
+      <h2>SQL Bank Database</h2>
+      <p>Relational database with accounts, transactions, loans & advanced SQL queries.</p>
+      <a href="https://github.com/SamBreenxyz/bankdatebase" target="_blank">View on GitHub</a>
+    </div>
 
-  <section>
-    <h2>Vocaloid Project</h2>
-    <p>Python & data science workflow applied to Vocaloid music data.</p>
-    <a href="https://github.com/SamBreenxyz/vocaloid-python" target="_blank">View on GitHub</a>
-    <img src="OIP.jpg" alt="Teto Kasane illustration">
-  </section>
+    <div class="card">
+      <img src="OIP.jpg" alt="Vocaloid logo">
+      <h2>Vocaloid Project</h2>
+      <p>Python & data science workflow applied to Vocaloid music data.</p>
+      <a href="https://github.com/SamBreenxyz/vocaloid-analysis" target="_blank">View on GitHub</a>
+    </div>
 
-  <section>
-    <h2>Balatro Project</h2>
-    <p>Python simulations exploring Balatro deck strategies and outcomes.</p>
-    <a href="https://github.com/SamBreenxyz/balatro-deck-analysis" target="_blank">View on GitHub</a>
-    <img src="d8c5d5861249cd80a300efb723450f56d0347e4e76a3df0f0f188a3e4b6e6a69.png" alt="Balatro Joker card art">
-  </section>
+    <div class="card">
+      <img src="d8c5d5861249cd80a300efb723450f56d0347e4a69b6f25e5020acde2f03bcdc.png" alt="Balatro logo">
+      <h2>Balatro Project</h2>
+      <p>Python simulations exploring Balatro deck strategies and outcomes.</p>
+      <a href="https://github.com/SamBreenxyz/balatro-data" target="_blank">View on GitHub</a>
+    </div>
 
-  <section>
-    <h2>Capstone Project (NASA)</h2>
-    <p>Full data science workflow on real NASA datasets.</p>
-    <a href="https://github.com/SamBreenxyz/capstone-coursea" target="_blank">View on GitHub</a>
-    <img src="2b2d821d-2492-46c9-9482-235103ef27ea.png" alt="NASA logo">
-  </section>
+    <div class="card">
+      <img src="2b2d821d-2492-46c9-9482-235103ef27ea.png" alt="NASA logo">
+      <h2>Capstone Project (NASA)</h2>
+      <p>Full data science workflow on real NASA datasets.</p>
+      <a href="https://github.com/SamBreenxyz/capstone-coursea" target="_blank">View on GitHub</a>
+    </div>
 
-  <section>
-    <h2>Pokémon Project</h2>
-    <p>Excel & Tableau analysis of Pokémon dataset with visual dashboards.</p>
-    <a href="https://github.com/SamBreenxyz/pokemon-dashboard" target="_blank">View on GitHub</a>
-    <img src="OIP (2).jpg" alt="Pokémon logo">
-  </section>
+    <div class="card">
+      <img src="OIP (2).jpg" alt="Pokémon logo">
+      <h2>Pokémon Project</h2>
+      <p>Excel & Tableau analysis of Pokémon dataset with visual dashboards.</p>
+      <a href="https://github.com/SamBreenxyz/pokemon-excel" target="_blank">View on GitHub</a>
+    </div>
 
+  </div>
 </body>
+
 </html>
