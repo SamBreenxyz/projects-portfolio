@@ -1,46 +1,224 @@
-<section id="projects">
-  <h2>Featured Projects</h2>
-  <div class="project-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Breen | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- SQL Bank Database -->
-    <div class="project-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Database-icon.svg" alt="SQL Bank Database">
-      <h3>SQL Bank Database</h3>
-      <p>Relational database with accounts, transactions, loans & analysis queries.</p>
-      <a href="https://github.com/SamBreenxyz/bankdatebase">View on GitHub</a>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
+      padding: 1rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #00adee; }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(135deg, #0a0a0a, #1c1c1c, #0a0a0a);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px #00adee;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #bbb;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px #00adee;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 8px 20px rgba(0, 173, 238, 0.3);
+    }
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .project-card h3 {
+      margin: 1rem;
+      font-size: 1.3rem;
+      color: #fff;
+    }
+    .project-card p {
+      margin: 0 1rem 1rem;
+      color: #ccc;
+    }
+    .project-card a {
+      display: inline-block;
+      margin: 0 1rem 1.2rem;
+      padding: 0.5rem 1rem;
+      background: #00adee;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .project-card a:hover { background: #008bb8; }
+
+    #about, #contact {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Sam Breen</h1>
+    <p>Aspiring Data Scientist • Python | SQL | Tableau | Excel</p>
+  </header>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+
+      <!-- SQL Bank Database -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Database-icon.svg" alt="SQL Bank Database">
+        <h3>SQL Bank Database</h3>
+        <p>Relational database with accounts, transactions, loans & analysis queries.</p>
+        <a href="https://github.com/SamBreenxyz/bankdatebase">View on GitHub</a>
+      </div>
+
+      <!-- Vocaloid Project (Miku Logo) -->
+      <div class="project-card">
+        <img src="https://seeklogo.com/images/H/hatsune-miku-logo-5020564F8D-seeklogo.com.png" alt="Hatsune Miku Logo">
+        <h3>Vocaloid Project</h3>
+        <p>Python & data science workflow applied to Vocaloid music data.</p>
+        <a href="https://github.com/SamBreenxyz/vocaloid-python">View on GitHub</a>
+      </div>
+
+      <!-- Balatro Project -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Playing_cards_set.jpg" alt="Balatro Project">
+        <h3>Balatro Project</h3>
+        <p>Python simulations exploring Balatro deck strategies and outcomes.</p>
+        <a href="https://github.com/SamBreenxyz/balatro-run-python">View on GitHub</a>
+      </div>
+
+      <!-- Capstone NASA -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Capstone NASA Project">
+        <h3>Capstone Project (NASA)</h3>
+        <p>Full data science workflow on real NASA datasets.</p>
+        <a href="https://github.com/SamBreenxyz/capstone-coursea">View on GitHub</a>
+      </div>
+
+      <!-- Pokémon Project -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg" alt="Pokémon Project">
+        <h3>Pokémon Project</h3>
+        <p>Excel & Tableau analysis of Pokémon dataset with visual dashboards.</p>
+        <a href="https://github.com/SamBreenxyz/pokemon-data-analysis-">View on GitHub</a>
+      </div>
     </div>
 
-    <!-- Vocaloid Project (Miku Logo) -->
-    <div class="project-card">
-      <img src="https://seeklogo.com/images/H/hatsune-miku-logo-5020564F8D-seeklogo.com.png" alt="Hatsune Miku Logo">
-      <h3>Vocaloid Project</h3>
-      <p>Python & data science workflow applied to Vocaloid music data.</p>
-      <a href="https://github.com/SamBreenxyz/vocaloid-python">View on GitHub</a>
+    <h2 style="margin-top:4rem;">Other Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Machine Learning with Python (IBM Data Science)</h3>
+        <a href="https://github.com/SamBreenxyz/machine-learning-with-python-coursa-ibm-data-science">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Data Visualisation (IBM Data Science)</h3>
+        <a href="https://github.com/SamBreenxyz/data-visuals-coursa-ibm-data-science">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Explore All Repos</h3>
+        <a href="https://github.com/SamBreenxyz?tab=repositories">See on GitHub</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Balatro Project -->
-    <div class="project-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Playing_cards_set.jpg" alt="Balatro Project">
-      <h3>Balatro Project</h3>
-      <p>Python simulations exploring Balatro deck strategies and outcomes.</p>
-      <a href="https://github.com/SamBreenxyz/balatro-run-python">View on GitHub</a>
-    </div>
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Hi, I'm <strong>Sam Breen</strong> — a data enthusiast building projects in Python, SQL, Tableau, and Excel.
+      I enjoy combining data science techniques with creative topics like Pokémon and Vocaloid,
+      while applying analytics to professional, real-world scenarios.
+    </p>
+  </section>
 
-    <!-- Capstone NASA -->
-    <div class="project-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Capstone NASA Project">
-      <h3>Capstone Project (NASA)</h3>
-      <p>Full data science workflow on real NASA datasets.</p>
-      <a href="https://github.com/SamBreenxyz/capstone-coursea">View on GitHub</a>
-    </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      📧 <a href="mailto:sambreen7@gmail.com">sambreen7@gmail.com</a><br>
+      📱 <a href="tel:+353866667722">086 666 7722</a><br>
+      🔗 <a href="https://github.com/SamBreenxyz">GitHub</a>
+    </p>
+  </section>
 
-    <!-- Pokémon Project -->
-    <div class="project-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg" alt="Pokémon Project">
-      <h3>Pokémon Project</h3>
-      <p>Excel & Tableau analysis of Pokémon dataset with visual dashboards.</p>
-      <a href="https://github.com/SamBreenxyz/pokemon-data-analysis-">View on GitHub</a>
-    </div>
-
-  </div>
-</section>
+  <footer>
+    <p>© 2025 Sam Breen. Built with ❤️ and GitHub Pages.</p>
+  </footer>
+</body>
+</html>
