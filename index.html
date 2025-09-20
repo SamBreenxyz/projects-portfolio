@@ -1,120 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcy's Project Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marcy's Portfolio</title>
   <style>
     body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
       margin: 0;
       padding: 0;
     }
-    header, footer {
-      background-color: #000;
-      padding: 20px;
+    header {
       text-align: center;
+      padding: 40px 20px;
+      background: #161b22;
     }
-    header h1, footer p {
+    header h1 {
+      font-size: 2.5em;
       margin: 0;
     }
-    nav a {
-      color: #0cf;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    header p {
+      font-size: 1.2em;
+      color: #8b949e;
     }
-    main {
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .contact {
+      margin-top: 15px;
+      font-size: 1em;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      padding: 40px;
     }
     .card {
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-      padding: 20px;
-      width: 280px;
-      text-align: center;
+      background: #161b22;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
     }
     .card img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 15px;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
     }
-    .card a {
+    .card-content {
+      padding: 20px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #58a6ff;
+    }
+    .card-content p {
+      color: #8b949e;
+      font-size: 0.95em;
+    }
+    .card-content a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #00bfff;
-      color: #000;
-      border-radius: 5px;
+      margin-top: 12px;
       text-decoration: none;
-      font-weight: bold;
+      color: #ffffff;
+      background: #238636;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
-    .card a:hover {
-      background-color: #00e6e6;
+    .card-content a:hover {
+      background: #2ea043;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Marcy's Project Portfolio</h1>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About Me</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Data Analysis • Python • SQL • Tableau • Creative Projects</p>
+    <div class="contact">
+      <p>📞 Phone: +353-XXX-XXXX</p>
+      <p>📧 Email: yourname@email.com</p>
+      <p>🌐 GitHub: <a href="https://github.com/SamBreenxyz" target="_blank" style="color:#58a6ff;">SamBreenxyz</a></p>
+    </div>
   </header>
 
-  <main id="projects">
-    <div class="card">
-      <img src="beaver-head.png" alt="SQL Bank Database logo">
-      <h2>SQL Bank Database</h2>
-      <p>Relational database with accounts, transactions, loans & advanced SQL queries.</p>
-      <a href="https://github.com/SamBreenxyz/bankdatebase">View on GitHub</a>
-    </div>
+  <main>
+    <div class="container">
+      <!-- Pokémon Project -->
+      <div class="card">
+        <img src="OIP (2).jpg" alt="Pokémon Project">
+        <div class="card-content">
+          <h3>Pokémon Data Analysis</h3>
+          <p>Exploring Pokémon stats, types, and combat insights using Excel, SQL, and Tableau.</p>
+          <a href="https://github.com/SamBreenxyz/pokemon-data-analysis-" target="_blank">View Project</a>
+        </div>
+      </div>
 
-    <div class="card">
-      <img src="OIP.jpg" alt="Vocaloid logo">
-      <h2>Vocaloid Project</h2>
-      <p>Python & data science workflow applied to Vocaloid music data.</p>
-      <a href="https://github.com/SamBreenxyz/vocaloid-datasci">View on GitHub</a>
-    </div>
+      <!-- Teto / Vocaloid -->
+      <div class="card">
+        <img src="OIP.jpg" alt="Vocaloid Project">
+        <div class="card-content">
+          <h3>Vocaloid Python</h3>
+          <p>A Python-based interactive project for Vocaloid songs and data-driven creativity.</p>
+          <a href="https://github.com/SamBreenxyz/vocaloid-python" target="_blank">View Project</a>
+        </div>
+      </div>
 
-    <div class="card">
-      <img src="d8c5d5861249cd80a300efb723450f56d0347e4345e2eb80.avif" alt="Balatro Joker card art">
-      <h2>Balatro Project</h2>
-      <p>Python simulations exploring Balatro deck strategies and outcomes.</p>
-      <a href="https://github.com/SamBreenxyz/balatro-analytics">View on GitHub</a>
-    </div>
+      <!-- Balatro -->
+      <div class="card">
+        <img src="760de304-bee3-4313-beda-d4c1bb4f6d30.png" alt="Balatro Project">
+        <div class="card-content">
+          <h3>Balatro Run Python</h3>
+          <p>A Python simulation and analysis of Balatro deck strategies and mechanics.</p>
+          <a href="https://github.com/SamBreenxyz/balatro-run-python" target="_blank">View Project</a>
+        </div>
+      </div>
 
-    <div class="card">
-      <img src="345237e2-4f7b-4177-8a9b-b630b3b71a67.png" alt="NASA logo">
-      <h2>Capstone Project (NASA)</h2>
-      <p>Full data science workflow on real NASA datasets.</p>
-      <a href="https://github.com/SamBreenxyz/capstone-coursea">View on GitHub</a>
-    </div>
+      <!-- NASA -->
+      <div class="card">
+        <img src="nasa-logo-web-rgb.webp" alt="NASA Project">
+        <div class="card-content">
+          <h3>Capstone Project (NASA Data)</h3>
+          <p>Capstone analysis project applying EDA and ML models on real-world NASA data.</p>
+          <a href="https://github.com/SamBreenxyz/capstone-coursea" target="_blank">View Project</a>
+        </div>
+      </div>
 
-    <div class="card">
-      <img src="OIP (2).jpg" alt="Pokémon logo">
-      <h2>Pokémon Project</h2>
-      <p>Excel & Tableau analysis of Pokémon dataset with visual dashboards.</p>
-      <a href="https://github.com/SamBreenxyz/pokemon-excel-tableau">View on GitHub</a>
+      <!-- DBeaver / Bank DB -->
+      <div class="card">
+        <img src="beaver-head.png" alt="Bank Database Project">
+        <div class="card-content">
+          <h3>Bank Database (SQL)</h3>
+          <p>A relational banking database built in DBeaver, showcasing SQL joins, views, and analytics.</p>
+          <a href="https://github.com/SamBreenxyz/bankdatebase" target="_blank">View Project</a>
+        </div>
+      </div>
     </div>
   </main>
-
-  <footer id="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm Marcy! I'm a passionate data analyst with interests in games, music, and all things stats.</p>
-
-    <h2 id="contact">Contact</h2>
-    <p>Email: sam.breen@example.com</p>
-    <p>GitHub: <a href="https://github.com/SamBreenxyz" style="color:#0cf">@SamBreenxyz</a></p>
-  </footer>
 </body>
 </html>
