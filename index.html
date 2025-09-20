@@ -12,6 +12,7 @@
       background: #0a0a0a;
       color: #f4f4f4;
       scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
     nav {
@@ -22,21 +23,22 @@
       justify-content: center;
       background: rgba(0,0,0,0.85);
       backdrop-filter: blur(6px);
-      padding: 0.8rem;
+      padding: 1rem;
       z-index: 1000;
     }
     nav a {
       color: #f4f4f4;
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 500;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
       transition: color 0.3s;
     }
     nav a:hover { color: #00adee; }
 
     header {
       height: 100vh;
-      background: linear-gradient(135deg, #111, #333, #111);
+      background: linear-gradient(135deg, #0a0a0a, #1c1c1c, #0a0a0a);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -50,25 +52,25 @@
       text-shadow: 0 0 20px #00adee;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #bbb;
     }
 
     section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
+      padding: 5rem 2rem;
+      max-width: 1200px;
       margin: auto;
     }
     h2 {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
       text-shadow: 0 0 10px #00adee;
     }
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
     .project-card {
@@ -83,12 +85,13 @@
     }
     .project-card img {
       width: 100%;
-      height: 160px;
-      object-fit: contain;
-      background: #fff;
+      height: 180px;
+      object-fit: cover;
     }
     .project-card h3 {
       margin: 1rem;
+      font-size: 1.4rem;
+      color: #fff;
     }
     .project-card p {
       margin: 0 1rem 1rem;
@@ -106,11 +109,30 @@
     }
     .project-card a:hover { background: #008bb8; }
 
-    #about p, #contact p {
+    #about, #represent {
       text-align: center;
-      max-width: 700px;
+      max-width: 800px;
       margin: auto;
-      line-height: 1.6;
+    }
+
+    .represent-images {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .represent-images img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00adee;
+      box-shadow: 0 0 10px rgba(0,173,238,0.6);
+      transition: transform 0.3s;
+    }
+    .represent-images img:hover {
+      transform: scale(1.1);
     }
 
     footer {
@@ -119,6 +141,7 @@
       background: #111;
       color: #777;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -126,6 +149,7 @@
   <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
+    <a href="#represent">What I Represent</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -137,60 +161,35 @@
   <section id="projects">
     <h2>Featured Projects</h2>
     <div class="project-grid">
-      <!-- SQL Bank Database -->
       <div class="project-card">
-        <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/512/external-database-computer-programming-icons-flaticons-flat-flat-icons.png" alt="SQL Bank Database Project">
+        <img src="https://placehold.co/400x200?text=SQL+Bank+Database" alt="SQL Bank Database Project">
         <h3>SQL Bank Database</h3>
-        <p>Relational database built in DuckDB/DBeaver with accounts, transactions, loans & advanced SQL queries.</p>
+        <p>Relational database with accounts, transactions, loans & analysis queries.</p>
         <a href="https://github.com/SamBreenxyz/bankdatebase">View on GitHub</a>
       </div>
-
-      <!-- Vocaloid Project -->
       <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Vocaloid_logo.png" alt="Vocaloid Project">
+        <img src="https://placehold.co/400x200?text=Vocaloid+Project" alt="Vocaloid Project">
         <h3>Vocaloid Project</h3>
-        <p>Python project analysing Vocaloid song data, with cleaning, stats, and visualisation.</p>
+        <p>Python & data science workflow applied to Vocaloid music data.</p>
         <a href="https://github.com/SamBreenxyz/vocaloid-python">View on GitHub</a>
       </div>
-
-      <!-- Balatro Project -->
       <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Playing_cards_set.jpg" alt="Balatro Project">
+        <img src="https://placehold.co/400x200?text=Balatro+Analysis" alt="Balatro Project">
         <h3>Balatro Project</h3>
-        <p>Python analysis and simulation of Balatro runs, exploring deck strategies and data patterns.</p>
+        <p>Python simulations exploring Balatro deck strategies and outcomes.</p>
         <a href="https://github.com/SamBreenxyz/balatro-run-python">View on GitHub</a>
       </div>
-
-      <!-- Capstone NASA -->
       <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Capstone NASA Project">
+        <img src="https://placehold.co/400x200?text=Capstone+NASA" alt="Capstone NASA Project">
         <h3>Capstone Project (NASA)</h3>
-        <p>Coursera Capstone project applying full data science workflow using NASA dataset.</p>
+        <p>Full data science workflow on real NASA datasets.</p>
         <a href="https://github.com/SamBreenxyz/capstone-coursea">View on GitHub</a>
       </div>
-
-      <!-- Pokémon Project -->
       <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg" alt="Pokémon Project">
+        <img src="https://placehold.co/400x200?text=Pokémon+Analysis" alt="Pokémon Project">
         <h3>Pokémon Project</h3>
-        <p>Excel, Tableau, and Python analysis of Pokémon datasets, with stats, categories and insights.</p>
+        <p>Excel & Tableau analysis of Pokémon dataset with visual dashboards.</p>
         <a href="https://github.com/SamBreenxyz/pokemon-data-analysis-">View on GitHub</a>
-      </div>
-    </div>
-
-    <h2 style="margin-top:4rem;">Other Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Machine Learning with Python (IBM Data Science)</h3>
-        <a href="https://github.com/SamBreenxyz/machine-learning-with-python-coursa-ibm-data-science">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Data Visualisation (IBM Data Science)</h3>
-        <a href="https://github.com/SamBreenxyz/data-visuals-coursa-ibm-data-science">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Explore All Repos</h3>
-        <a href="https://github.com/SamBreenxyz?tab=repositories">See on GitHub</a>
       </div>
     </div>
   </section>
@@ -199,9 +198,21 @@
     <h2>About</h2>
     <p>
       Hi, I'm <strong>Sam Breen</strong> — a data enthusiast building projects in Python, SQL, Tableau, and Excel.
-      I enjoy blending data science techniques with creative topics like Pokémon and Vocaloid, while also applying
-      professional-grade analytics for banking and real-world use cases.
+      I enjoy blending data science techniques with creative topics like Pokémon and Vocaloid,
+      while applying analytics in banking and real-world scenarios.
     </p>
+  </section>
+
+  <section id="represent">
+    <h2>What I Represent</h2>
+    <p>Beyond data, I represent creativity, analysis, and growth. Here are some visuals of my inspirations and identity:</p>
+    <div class="represent-images">
+      <img src="https://placehold.co/150x150?text=Data" alt="Data Representation">
+      <img src="https://placehold.co/150x150?text=Pokémon" alt="Pokémon Representation">
+      <img src="https://placehold.co/150x150?text=Vocaloid" alt="Vocaloid Representation">
+      <img src="https://placehold.co/150x150?text=Gaming" alt="Gaming Representation">
+      <img src="https://placehold.co/150x150?text=Alt+Style" alt="Alternative Style">
+    </div>
   </section>
 
   <section id="contact">
