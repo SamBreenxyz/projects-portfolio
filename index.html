@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Breen | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
+      color: #f4f4f4;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(6px);
+      padding: 0.8rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #00adee; }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(135deg, #111, #333, #111);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px #00adee;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      text-shadow: 0 0 10px #00adee;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: #1c1c1c;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 173, 238, 0.4);
+    }
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .project-card h3 {
+      margin: 1rem;
+    }
+    .project-card p {
+      margin: 0 1rem 1rem;
+      color: #ccc;
+    }
+    .project-card a {
+      display: inline-block;
+      margin: 0 1rem 1.2rem;
+      padding: 0.6rem 1.2rem;
+      background: #00adee;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .project-card a:hover { background: #008bb8; }
+
+    #about p, #contact p {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Sam Breen</h1>
+    <p>Aspiring Data Scientist • Python | SQL | Tableau | Excel</p>
+  </header>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <!-- SQL Bank Database -->
+      <div class="project-card">
+        <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/512/external-database-computer-programming-icons-flaticons-flat-flat-icons.png" alt="SQL Bank Database Project">
+        <h3>SQL Bank Database</h3>
+        <p>Relational database built in DuckDB/DBeaver with accounts, transactions, loans & advanced SQL queries.</p>
+        <a href="https://github.com/SamBreenxyz/bankdatebase">View on GitHub</a>
+      </div>
+
+      <!-- Vocaloid Project -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Vocaloid_logo.png" alt="Vocaloid Project">
+        <h3>Vocaloid Project</h3>
+        <p>Python project analysing Vocaloid song data, with cleaning, stats, and visualisation.</p>
+        <a href="https://github.com/SamBreenxyz/vocaloid-python">View on GitHub</a>
+      </div>
+
+      <!-- Balatro Project -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Playing_cards_set.jpg" alt="Balatro Project">
+        <h3>Balatro Project</h3>
+        <p>Python analysis and simulation of Balatro runs, exploring deck strategies and data patterns.</p>
+        <a href="https://github.com/SamBreenxyz/balatro-run-python">View on GitHub</a>
+      </div>
+
+      <!-- Capstone NASA -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="Capstone NASA Project">
+        <h3>Capstone Project (NASA)</h3>
+        <p>Coursera Capstone project applying full data science workflow using NASA dataset.</p>
+        <a href="https://github.com/SamBreenxyz/capstone-coursea">View on GitHub</a>
+      </div>
+
+      <!-- Pokémon Project -->
+      <div class="project-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pokémon_logo.svg" alt="Pokémon Project">
+        <h3>Pokémon Project</h3>
+        <p>Excel, Tableau, and Python analysis of Pokémon datasets, with stats, categories and insights.</p>
+        <a href="https://github.com/SamBreenxyz/pokemon-data-analysis-">View on GitHub</a>
+      </div>
+    </div>
+
+    <h2 style="margin-top:4rem;">Other Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Machine Learning with Python (IBM Data Science)</h3>
+        <a href="https://github.com/SamBreenxyz/machine-learning-with-python-coursa-ibm-data-science">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Data Visualisation (IBM Data Science)</h3>
+        <a href="https://github.com/SamBreenxyz/data-visuals-coursa-ibm-data-science">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Explore All Repos</h3>
+        <a href="https://github.com/SamBreenxyz?tab=repositories">See on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Hi, I'm <strong>Sam Breen</strong> — a data enthusiast building projects in Python, SQL, Tableau, and Excel.
+      I enjoy blending data science techniques with creative topics like Pokémon and Vocaloid, while also applying
+      professional-grade analytics for banking and real-world use cases.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      📧 <a href="mailto:sambreen7@gmail.com">sambreen7@gmail.com</a><br>
+      📱 <a href="tel:+353866667722">086 666 7722</a><br>
+      🔗 <a href="https://github.com/SamBreenxyz">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Sam Breen. Built with ❤️ and GitHub Pages.</p>
+  </footer>
+</body>
+</html>
